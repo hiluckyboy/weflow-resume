@@ -1,0 +1,35 @@
+<div class="work_exp">
+    <div class="line"></div>
+    <span>工作经历</span>
+</div>
+<div class="content">
+    <%- include('work.html'); -%>
+</div>
+<div class="content">
+    <%- include('work_two.html'); -%>
+</div>
+<div class="work_exp">
+    <div class="line"></div>
+    <span>自我评价</span>
+</div>
+
+<div class="content">
+    <div class="wrap">
+        <div class="wrap_cont">
+            <p>我对待工作认真负责，善于沟通、协调有较强的组织本事与团队精神；活泼开朗、乐观上进、有爱心并善于施教并行；上进心强、勤于学习能不断提高自身的本事与综合素质。在未来的工作中，我将以充沛的精力，刻苦钻研的精神来努力工作，稳定地提高自我的工作本事，与公司同步发展。</p>
+            <p>进取主动、独立性强、具有高度的职责感和敬业精神，待人真诚、诚实守信、团结协作意识强，能够吃苦耐劳，勇于挑战新事物，具有必须的开拓创新本事，“踏实做事，诚实做人”是我为人处世的原则。</p>
+        </div>
+    </div>
+</div>
+
+<div class="left_style" id="left_style">
+    <div class="mid_line"></div>
+</div>
+<script>
+    for(var i=0;i<20;i++){
+        var oDiv = document.createElement("div");
+        oDiv.className = "lines";
+        oDiv.style.top = i*6+0.5 +"rem";
+        document.getElementById("left_style").appendChild(oDiv);
+    }
+</script>
