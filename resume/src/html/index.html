@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/style-index.css" />
+</head>
+<body>
+    <div class="wrap_page">
+        <div class="wrap_left">
+            <!-- 个人简历标题+头像 -->
+            <%- include('left_head.html'); -%>
+            <!-- 个人简述 -->
+            <% var list_arr = [
+                { 
+                    parsen: "个人信息",
+                    child: [
+                        {"name":"张春涛","title":"姓名","icon":"1"},
+                        {"name":"17611488086","title":"电话","icon":"1"},
+                        {"name":"983628189@qq.com","title":"邮箱","icon":"1"},
+                        {"name":"26","title":"年龄","icon":"1"},
+                        {"name":"通州区小甘棠村","title":"住址","icon":"1"},
+                        {"name":"3年","title":"工作经验","icon":"1"}
+                    ]
+                },
+                { 
+                    parsen: "求职意向",
+                    child: [
+                        {"name":"web前端工程师","title":"从事职业","icon":"1"},
+                        {"name":"20k","title":"期望月薪","icon":"1"}
+                    ]
+                },
+                { 
+                    parsen: "教育背景",
+                    child: [
+                        {"name":"河南理工学院","title":"学校名称","icon":"1"},
+                        {"name":"学士","title":"学历学位","icon":"1"},
+                        {"name":"电子科学与技术","title":"所学专业","icon":"1"},
+                        {"name":"2017年7月","title":"毕业时间","icon":"1"}
+                    ]
+                }
+            ] %>
+            <% for(var i=0; i<list_arr.length; i++){ %>
+                <%- include('left_list.html',{arr: list_arr[i]}); -%>
+            <% } %>
+        </div>
+        <div class="wrap_right">
+            <%- include('page_right.html'); -%>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

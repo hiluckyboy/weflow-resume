@@ -1,0 +1,22 @@
+<% var datalist = arr; %>
+<div class="model">
+    <div class="lineradius"></div>
+    <div class="biaoti">
+        <div class="line"></div>
+        <span><%- datalist.parsen -%></span>
+    </div>
+    <% if(datalist.child){ %>
+        <% for( var i=0; i<datalist.child.length; i++ ){ %>
+            <div class="list_item">
+                <div class="item_icon"></div>
+                <div class="item_title"><%- datalist.child[i].title -%>:</div>
+                <div class="item_name"><%- datalist.child[i].name -%></div>
+            </div>
+        <% } %>
+    <% } %>
+    <div class="bottom_style">
+        <div class="mid_line"></div>
+        <div class="left_line"></div>
+        <div class="right_line"></div>
+    </div>
+</div>
